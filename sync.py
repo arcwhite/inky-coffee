@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+
+# sync.py
+# Intended to be called periodically from my raspberryPi with InkyWHAT display
+# This will pull images down from Dropbox (configured elsewhere) and convert them into
+# 3-colour PNGs for diplay on that device. It adds a hash to the image filenames in such a 
+# way that the same input image won't get reprocessed (hopefully?)
+
 import datetime
 import hashlib
 import fnmatch
