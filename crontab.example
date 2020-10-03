@@ -1,0 +1,3 @@
+*/2 * * * * /home/pi/Dropbox-Uploader/dropbox_uploader.sh -f /home/pi/.dropbox_uploader -s download ./ /home/pi/Documents/inky-coffee
+*/3 * * * * /home/pi/Documents/inky-coffee/sync.py
+*/2 * * * * /home/pi/Documents/inky-coffee/display.py
