@@ -1,3 +1,8 @@
+# Pull files from Dropbox using Dropbox-Uploader
 */2 * * * * /home/pi/Dropbox-Uploader/dropbox_uploader.sh -f /home/pi/.dropbox_uploader -s download ./ /home/pi/Documents/inky-coffee
+
+# Format the files for display. Eventually this should encompass the Dropbox-sync step, above.
 */3 * * * * /home/pi/Documents/inky-coffee/sync.py
+
+# Periodically display a new image
 */2 * * * * /home/pi/Documents/inky-coffee/display.py
