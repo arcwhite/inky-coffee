@@ -9,6 +9,7 @@ from PIL import Image, ImageDraw
 from os import listdir, remove
 from os.path import isfile, join
 from inky import InkyWHAT
+import random
 
 # SYNC_DIR='/home/pi/Documents/inky-coffee/'
 SYNC_DIR='/Users/arcwhite/Dropbox/Apps/inky-coffee/'
@@ -19,9 +20,10 @@ inky_display.set_border(inky_display.WHITE)
 
 image_files = [f for f in listdir(IMAGE_OF_DAY_DIR) if isfile(join(IMAGE_OF_DAY_DIR, f))]
 
-# Need some way to track which file we're currently up to?
+# TODO: Need some way to track which file we're currently up to?
+# Let's just random-select for now!
 
-name = image_files[0]
+name = random.choice(image_files)
 img = Image.open(join(IMAGE_OF_DAY_DIR, name))
 
 inky_display.set_image(img)
